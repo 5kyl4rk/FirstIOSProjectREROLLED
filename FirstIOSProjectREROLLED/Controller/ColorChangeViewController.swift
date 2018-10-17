@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class ViewController: UIViewController {
+public class ColorChangeViewController: UIViewController {
 
     private lazy var myColor: ColorTool = ColorTool()
     
@@ -35,6 +35,11 @@ public class ViewController: UIViewController {
     {
         colorLabel.textColor = myColor.createRandomColor()
         self.view.backgroundColor = myColor.createRandomColor()
+        redSlider.value = myColor.redValue
+        greenSlider.value = myColor.greenValue
+        blueSlider.value = myColor.blueValue
+        
+        
         
         let modoCount = arc4random() % 11
         if  (modoCount >= 8 && modoCount < 10)
